@@ -1,0 +1,6 @@
+POST http://localhost:9000/notes/editNote Content-Type:
+
+{
+    "content": "esto es una nueva nota",
+    "id" : "611de1e9b0ce110e221cfc68"
+}

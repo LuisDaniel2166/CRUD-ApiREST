@@ -1,0 +1,25 @@
+{
+  "name": "crud-apirest",
+  "version": "1.0.0",
+  "description": "Api Rest using Node.js, Express and Mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisDaniel2166/CRUD-ApiREST.git"
+  },
+  "author": "Luis Daniel Mendez Castellanos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisDaniel2166/CRUD-ApiREST/issues"
+  },
+  "homepage": "https://github.com/LuisDaniel2166/CRUD-ApiREST#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7"
+  }
+}
