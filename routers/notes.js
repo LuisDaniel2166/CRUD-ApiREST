@@ -17,14 +17,27 @@ router.get('/', async (req,res) => {
     })
 })
 
+router.post('/searchUser', async (req,res) =>{
+    const dataJS=req.body.data
+    Notes.find({user: dataJS.user})
+    .then(doc => {
+        res.status(status.OK).json(doc)
+    })
+    .catch(err => {
+        res.status(status.INTERNAL_SERVER_ERROR).json({
+            error: err.toString()
+        })
+    })
+})
+
 router.post('/addNote', async (req,res) => {
-    const user= req.body.user
-    const content = req.body.content
+    const dataJS= req.body.data
     let data = {
-        date: new Date(),
-        content: content,
-        user: user,
+        date: dataJS.date,
+        content: dataJS.content,
+        user: dataJS.user,
     }
+    console.log(data)
     Notes.create(data).then(doc => {
         res.status(status.OK).json({
             created: true
